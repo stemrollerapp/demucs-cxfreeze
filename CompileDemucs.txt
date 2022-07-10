@@ -1,0 +1,18 @@
+# On Windows, the Stable version supports CUDA
+# On macOS, only the nightly version supports MPS (Metal Performance Shaders)
+# Windows: pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+# macOS:   pip3 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
+# For the CPU-only version
+pip3 install torch torchvision torchaudio
+
+pip3 install demucs
+pip3 install SoundFile
+
+pip3 install pyinstaller
+
+# Windows: pyinstaller main.py -n demucs-pyinstaller --hidden-import torchaudio.lib.libtorchaudio --hidden-import torchaudio.lib.libtorchaudio_ffmpeg
+# macOS:   pyinstaller main.py -n demucs-pyinstaller --hidden-import torchaudio.lib.libtorchaudio --hidden-import torchaudio.lib.libtorchaudio_ffmpeg --hidden-import torchaudio.lib.libtorchaudio_decoder
+
+Create path dist/demucs-pyinstaller/demucs/remote
+Copy venv/Lib/site-packages/demucs/remote/* to dist/demucs-pyinstaller/demucs/remote/*
