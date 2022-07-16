@@ -7,6 +7,8 @@ pip3 install torch torchvision torchaudio demucs SoundFile cx-Freeze
 cxfreeze main.py --target-dir=dist --target-name=demucs-cxfreeze --packages=torch
 ```
 
+Copy `venv/Lib/site-packages/_soundfile_data` to `dist/lib/_soundfile_data`
+
 ## Additional Dependenices (should be shipped with frozen Demucs; not included with this repository's releases)
 
 ### `ffmpeg` and `ffprobe`
