@@ -2,8 +2,16 @@
 
 ## Freezing `demucs`
 
+**With CUDA support (Windows & Linux)**
+```
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116 demucs SoundFile cx-Freeze
+```
+**CPU only**
 ```
 pip3 install torch torchvision torchaudio demucs SoundFile cx-Freeze
+```
+And then:
+```
 cxfreeze main.py --target-dir=dist --target-name=demucs-cxfreeze --packages=torch
 ```
 
