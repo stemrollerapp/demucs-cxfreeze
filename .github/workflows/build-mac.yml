@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.11'
-      - run: python -m pip install torch torchvision torchaudio demucs SoundFile cx-Freeze
-      - run: python -m cxfreeze main.py --target-dir=demucs-cxfreeze-mac --target-name=demucs-cxfreeze --packages=torch --includes=demucs.htdemucs
+      - run: pip install torch torchvision torchaudio demucs SoundFile cx-Freeze
+      - run: cxfreeze main.py --target-dir=demucs-cxfreeze-mac --target-name=demucs-cxfreeze --packages=torch --includes=demucs.htdemucs
       - run: ditto -c -k --sequesterRsrc --keepParent demucs-cxfreeze-mac demucs-cxfreeze-mac.zip
       - uses: softprops/action-gh-release@v1
         with:
