@@ -25,4 +25,4 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           tag_name: release-${{ github.sha }}
-          files: demucs-cxfreeze-win-cuda.zip
+          files: demucs-cxfreeze-win-cuda.7z
