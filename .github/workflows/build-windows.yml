@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.11'
-      - run: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+      - run: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
       - run: pip install demucs SoundFile cx-Freeze
       - run: cxfreeze main.py --target-dir=demucs-cxfreeze-win-cuda --target-name=demucs-cxfreeze --packages=torch --includes=demucs.htdemucs
       - run: Invoke-WebRequest -Uri https://www.7-zip.org/a/7zr.exe -OutFile 7zr.exe
