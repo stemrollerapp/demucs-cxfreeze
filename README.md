@@ -1,3 +1,5 @@
+Warning: this repo is now deprecated in favor of [https://www.github.com/stemrollerapp/demucs](https://www.github.com/stemrollerapp/demucs)
+
 # demucs-cxfreeze
 
 ## Freezing `demucs`
